@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import './style.css';
 
 export function Navbar() {
     return (
@@ -17,6 +18,7 @@ export function Navbar() {
                     </ul>
                 </div>
             </div>
+            <button className="btn btn-primary">okay</button>
         </nav>
     )
 }
