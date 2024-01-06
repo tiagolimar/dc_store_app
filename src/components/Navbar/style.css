@@ -1,0 +1,47 @@
+.logo-digital {
+    color: var(--primary, #c92071);
+    font-family: Inter;
+    font-size: 36.395px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.364px;
+}
+
+.pesquisar {
+    padding: 10px;
+    height: 60px;
+    width: 50vw;
+    border: none;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+}
+
+.pesquisar::placeholder {
+    opacity: initial;
+    color: #a0a0a0;
+}
+
+.pesquisar + img {
+    margin-left: -30px;
+}
+
+.btn-cadastro {
+    color: #474747;
+}
+
+.btn-cadastro:hover{
+    color: #c92071;
+}
+
+.btn-entrar {
+    width: 114px;
+    height: 40px;
+    background-color: #c92071;
+    color: white;
+}
+
+.btn-entrar:hover{
+    background-color: #ef2686;
+    color: white;
+}
