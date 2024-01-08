@@ -23,7 +23,8 @@
 }
 
 .pesquisar + img {
-    margin-left: -30px;
+    margin-left: -35px;
+    margin-right: 35px;
 }
 
 .btn-cadastro {
