@@ -1,5 +1,6 @@
 import "./style.css"
-import { LogoWhite } from './../_Geral/LogoWhite';
+import { LogoWhite } from './../_Geral/LogoWhite'
+import medias from "../../../assets/medias.svg"
 
 const Information = ()=>{
     return(
@@ -40,7 +41,7 @@ const SectionTop = ()=>{
             <p className="mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta amet architecto eos.</p>
         </div>
         <div className="section-media mb-5">
-            <img src="../../../assets/medias.svg" alt="mídas sociais" />
+            <img src={medias} alt="mídas sociais" />
         </div>
     </div>
     )
