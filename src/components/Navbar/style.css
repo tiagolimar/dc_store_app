@@ -11,7 +11,7 @@
 .pesquisar {
     padding: 10px;
     height: 60px;
-    width: 50vw;
+    width: 40vw;
     border: none;
     border-radius: 10px;
     background-color: #f8f8f8;
@@ -33,6 +33,8 @@
 
 .btn-cadastro:hover{
     color: #c92071;
+    font-weight: bold;
+    transition-duration: 300ms;
 }
 
 .btn-entrar {
@@ -43,6 +45,18 @@
 }
 
 .btn-entrar:hover{
-    background-color: #ef2686;
+    background-color: #951754;
     color: white;
+    transition-duration: 300ms;
+}
+
+.nav-link:hover{
+    font-weight: bold;
+    color: #c92071;
+    border-bottom: 3px solid #c92071;
+}
+
+.nav-link.actived{
+    color: #cf3b83;
+    font-weight: bold;
 }
