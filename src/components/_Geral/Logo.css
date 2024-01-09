@@ -1,0 +1,13 @@
+.logo-digital {
+    color: var(--primary, #c92071);
+    font-family: Inter;
+    font-size: 36.395px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.364px;
+}
+
+.logo-digital:hover{
+    color: #c92071;
+}

@@ -1,14 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import './style.css';
-
-const Logo = ()=>{
-    return(
-        <div className="d-flex gap-2">
-            <img src="../../../assets/digital-store.svg" alt="logo digital store" className="ms-4"/>
-            <Link className="navbar-brand logo-digital" to="/">Digital Store</Link>
-        </div>
-    )
-}
+import { Logo } from './../_Geral/Logo';
 
 const ButtonCollapse = ()=>{
     return (<button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +19,8 @@ const Search = ()=>{
 
 const ItemPage = (props)=>{
     const location = useLocation()
-    const active = location.pathname == props.path ? "actived" : ""
+    let active = location.pathname == props.path ? "actived" : ""
+    if (props.path =='/home' && location.pathname=='/') active = "actived"
     return (
         <li className="nav-item"> <Link className={`nav-link ${active}`} to={props.path}>{props.name}</Link> </li>
     )

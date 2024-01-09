@@ -1,0 +1,15 @@
+.logo-digital-white {
+    color: white;
+    font-family: Inter;
+    font-size: 36.395px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.364px;
+    text-decoration: none;
+    min-width: 225px;
+}
+
+.logo-digital-white:hover{
+    color: white;
+}
