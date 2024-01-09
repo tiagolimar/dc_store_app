@@ -3,15 +3,12 @@
 }
 
 .Page{
-    margin: 3vw;
-    border-radius: 50px;
     text-align: center;
-    width: 90vw;
+    width: 100%;
     height: 200px;
     line-height: 200px;
     background-color: #c92071;
     font-size: 48px;
     font-weight: 600;
     color: white;
-    box-shadow: 10px 10px 5px #00000040;
 }
