@@ -1,6 +1,6 @@
 function MeusPedidos() {
   return (
-    <div>MeusPedidos</div>
+    <div className="Page">MeusPedidos</div>
   )
 }
 

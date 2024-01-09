@@ -1,6 +1,6 @@
 function Produtos() {
   return (
-    <div>Produtos</div>
+    <div className="Page">Produtos</div>
   )
 }
 

@@ -43,6 +43,7 @@
 .nav-link:hover{
     font-weight: bold;
     color: #c92071;
+    transform: translateY(-5px);
     border-bottom: 3px solid #c92071;
 }
 

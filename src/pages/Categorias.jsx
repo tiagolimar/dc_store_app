@@ -1,6 +1,6 @@
 function Categorias() {
   return (
-    <div>Categorias</div>
+    <div className="Page">Categorias</div>
   )
 }
 
