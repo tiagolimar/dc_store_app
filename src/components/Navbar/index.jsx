@@ -1,6 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
-import './style.css';
-import { Logo } from './../_Geral/Logo';
+import "./style.css";
+import { Logo } from "./../_Geral/Logo";
+import carrinho from "../../../assets/carrinho.svg"
+import search from "../../../assets/search.svg"
 
 const ButtonCollapse = ()=>{
     return (<button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,7 +14,7 @@ const Search = ()=>{
     return(
         <div>
             <input type="text" placeholder="Pesquisar produto..." className="pesquisar col-10" />
-            <img src="../../../assets/search.svg" alt="logo pesquisar" />
+            <img src={search} alt="logo pesquisar" />
         </div>
     )
 }
@@ -37,7 +39,7 @@ export function Navbar() {
                     <div className="btn-grupo d-flex gap-3 align-items-center">
                         <a href="#" className="btn-cadastro">Cadastre-se</a>
                         <button className="btn btn-entrar">Entrar</button>
-                        <img src="../../../assets/carrinho.svg" alt="carrinho de compra" />
+                        <img src={carrinho} alt="carrinho de compra" />
                     </div>
                 </div>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
