@@ -1,5 +1,5 @@
-import tenis from "../../../../assets/tenis.png";
-import circulo from "../../../../assets/circulo.svg";
+import tenis from "../../../../../assets/tenis.png";
+import circulo from "../../../../../assets/circulo.svg";
 import "./style.css";
 
 const ButtonSlide = (props) => {
