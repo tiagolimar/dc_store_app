@@ -1,14 +1,9 @@
 import { useEffect, useState } from "react";
-import { Carrosel } from "./components/Carrosel";
 import axios from "axios";
 
-const Destaque = () => {
-    return <div className="Page">Destaque</div>;
-};
+import { Carrosel } from "./components/Carrosel";
+import { Destaque } from './components/Destaque/index';
 
-const DestaqueIcones = () => {
-    return <div className="Page">Destaque Ícones</div>;
-};
 
 const ProdutosEmAlta = () => {
     let [produtos, setProdutos] = useState([]);
@@ -35,7 +30,6 @@ function Home() {
         <>
             <Carrosel />
             <Destaque />
-            <DestaqueIcones />
             <ProdutosEmAlta />
             <ProdutosEmDestaque />
         </>
