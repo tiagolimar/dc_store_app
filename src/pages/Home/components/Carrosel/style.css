@@ -73,8 +73,10 @@
     font-weight: bold;
     padding: 12px;
     border: none;
+    transition-duration: 300ms;
 }
 
 .slide-left-btn:hover{
     background-color: #951754;
+    transition-duration: 300ms;
 }

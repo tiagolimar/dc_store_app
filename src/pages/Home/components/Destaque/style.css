@@ -1,8 +1,48 @@
-.container.destaques .destaque-cards .destaque-card {
-    border: 2px solid red;
-    min-width: 300px;
-    width: 30%;
+.destaque-card {
     height: 225px;
     background-color: #d8e3f2;
-    color: red;
+    border-radius: 10px;
+}
+
+.destaque-pill {
+    border-radius: 16px;
+    background-color: #e7ff86;
+    width: fit-content;
+    height: 32px;
+    line-height: 32px;
+    color: var(--dark-gray-2, #474747);
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 157.143% */
+    letter-spacing: 0.75px;
+}
+
+.destaque-card-title {
+    width: 190px;
+    color: var(--dark-gray, #1f1f1f);
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px; /* 112.5% */
+    letter-spacing: 1px;
+}
+
+.destaque-button {
+    width: 153px;
+    height: 48px;
+    flex-shrink: 0;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.destaque-link{
+    text-decoration: none;
+    color: #c92071;
+    line-height: 42px;
+    font-weight: bold;
 }
