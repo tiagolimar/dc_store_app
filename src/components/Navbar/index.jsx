@@ -13,7 +13,7 @@ const ButtonCollapse = ()=>{
 const Search = ()=>{
     return(
         <div>
-            <input type="text" placeholder="Pesquisar produto..." className="pesquisar col-10" />
+            <input type="text" placeholder="Pesquisar..." className="pesquisar col-10" />
             <img src={search} alt="logo pesquisar" />
         </div>
     )

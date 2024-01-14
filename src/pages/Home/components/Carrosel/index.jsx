@@ -26,7 +26,7 @@ const CarosselItem = (props) => {
                     <h3 className="slide-left-title">
                         Melhores ofertas personalizadas
                     </h3>
-                    <h2 className="slide-left-subtile">Queima de stoque Nike 🔥</h2>
+                    <h2 className="slide-left-subtitle">Queima de stoque Nike 🔥</h2>
                     <p className="slide-left-text">
                         Consequat culpa exercitation mollit nisi excepteur do do
                         tempor laboris eiusmod irure consectetur.
@@ -35,7 +35,7 @@ const CarosselItem = (props) => {
                 </div>
                 <div className="slide-right position-relative mt-5 ms-5">
                     <img src={tenis} className="w-90 w-sm-50" alt="Tênis" />
-                    <img src={circulo} className="position-absolute top-0" alt="círculo" />
+                    <img src={circulo} className="circle position-absolute top-0" alt="círculo" />
                 </div>
             </div>
         </div>

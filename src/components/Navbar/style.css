@@ -21,7 +21,7 @@
     color: #474747;
 }
 
-.btn-cadastro:hover{
+.btn-cadastro:hover {
     color: #c92071;
     font-weight: bold;
     transition-duration: 300ms;
@@ -34,20 +34,20 @@
     color: white;
 }
 
-.btn-entrar:hover{
+.btn-entrar:hover {
     background-color: #951754;
     color: white;
     transition-duration: 300ms;
 }
 
-.nav-link:hover{
+.nav-link:hover {
     font-weight: bold;
     color: #c92071;
     transform: translateY(-5px);
     border-bottom: 3px solid #c92071;
 }
 
-.nav-link.actived{
+.nav-link.actived {
     color: #cf3b83;
     font-weight: bold;
 }

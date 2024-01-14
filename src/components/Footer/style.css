@@ -25,6 +25,12 @@ li{
     width: 350px;
 }
 
+@media (max-width: 400px) {
+    .section-main p{
+        width: 250px;
+    }
+}
+
 .section-information, .section-category{
     width: 200px;
 }
