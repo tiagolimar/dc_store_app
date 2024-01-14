@@ -26,8 +26,8 @@ li{
 }
 
 @media (max-width: 400px) {
-    .section-main p{
-        width: 250px;
+    .section-main{
+        width: 80vw;
     }
 }
 

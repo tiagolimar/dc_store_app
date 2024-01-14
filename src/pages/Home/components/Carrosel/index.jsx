@@ -20,8 +20,8 @@ const ButtonSlide = (props) => {
 const CarosselItem = (props) => {
     const active = props.active ? "active" : "";
     return (
-        <div className={`carousel-item ${active}`}>
-            <div className="container d-flex flex-lg-nowrap flex-md-wrap flex-sm-wrap flex-wrap mb-5">
+        <div className={`carousel-item ${active}`} data-bs-interval={5000}>
+            <div className="container d-flex flex-lg-nowrap flex-wrap mb-5">
                 <div className="slide-left d-flex flex-column justify-content-center mt-5">
                     <h3 className="slide-left-title">
                         Melhores ofertas personalizadas
@@ -33,8 +33,8 @@ const CarosselItem = (props) => {
                     </p>
                     <button className="slide-left-btn">Ver Ofertas</button>
                 </div>
-                <div className="slide-right position-relative mt-5 ms-5">
-                    <img src={tenis} className="w-90 w-sm-50" alt="Tênis" />
+                <div className="slide-right mt-5 ms-5 position-relative">
+                    <img src={tenis} className="img-main" alt="Tênis" />
                     <img src={circulo} className="circle position-absolute top-0" alt="círculo" />
                 </div>
             </div>
@@ -44,7 +44,7 @@ const CarosselItem = (props) => {
 
 export const Carrosel = () => {
     return (
-        <div id="carousel-slide" className="carousel slide">
+        <div id="carousel-slide" className="carousel slide" data-bs-ride="carousel">
             <div className="carousel-indicators">
                 <ButtonSlide active="true" num={0} label="Slide 1" />
                 <ButtonSlide num={1} label="Slide 2" />
