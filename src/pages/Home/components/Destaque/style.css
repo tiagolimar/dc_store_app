@@ -61,11 +61,27 @@
 }
 
 .destaque-circle-item-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100px;
     height: 100px;
     background-color: white;
     border-radius: 50%;
     box-shadow: 0px 0px 10px #00000010;
+    transition-duration: 300ms;
+}
+
+.destaque-circle-item-img:hover{
+    box-shadow: 0px 0px 10px #00000050;
+    transition-duration: 300ms;
+}
+
+.destaque-circle-item-img path:hover,
+.destaque-circle-item-img rect:hover {
+    fill:#c92071;
+    stroke: #c92071;
+    transition-duration: 300ms;
 }
 
 .destaque-circle-item p {

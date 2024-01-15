@@ -1,14 +1,20 @@
 import { obterProdutos } from "./fetch.js";
 import "./style.css";
 
+import {Headphones} from "./components/Headphones"
+import {Pants} from "./components/Pants"
+import {Tenis} from "./components/Tenis"
+import {Tshirt} from "./components/Tshirt"
+
 const DestaqueCircleItem = (props) => {
     return (
         <div className="destaque-circle-item mb-4">
             <div className="destaque-circle-item-img">
-            <img src={props.img} alt="" />
-
+            {props.children}
             </div>
-            <p className="mt-2">{props.title}</p>
+            <div className="destaque-circle-item-text">
+                <p className="mt-2">{props.title}</p>
+            </div>
         </div>
     );
 };
@@ -16,11 +22,11 @@ const DestaqueCircleItem = (props) => {
 const DestaqueCircles = () => {
     return (
         <div className="d-flex gap-5 justify-content-center flex-wrap">
-            <DestaqueCircleItem title="Camisetas" img={0} />
-            <DestaqueCircleItem title="Calças" img={0} />
-            <DestaqueCircleItem title="Bonés" img={0} />
-            <DestaqueCircleItem title="Headphones" img={0} />
-            <DestaqueCircleItem title="Tênis" img={0} />
+            <DestaqueCircleItem title="Camisetas" ><Tshirt /></DestaqueCircleItem>
+            <DestaqueCircleItem title="Calças" ><Pants /></DestaqueCircleItem>
+            <DestaqueCircleItem title="Bonés" ><Pants /></DestaqueCircleItem>
+            <DestaqueCircleItem title="Headphones" ><Headphones /></DestaqueCircleItem>
+            <DestaqueCircleItem title="Tênis" ><Tenis /></DestaqueCircleItem>
         </div>
     );
 };
