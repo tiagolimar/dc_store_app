@@ -4,7 +4,6 @@ import axios from "axios";
 import { Carrosel } from "./components/Carrosel";
 import { Destaque } from './components/Destaque/index';
 
-
 const ProdutosEmAlta = () => {
     let [produtos, setProdutos] = useState([]);
 

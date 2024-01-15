@@ -1,6 +1,30 @@
 import { obterProdutos } from "./fetch.js";
 import "./style.css";
 
+const DestaqueCircleItem = (props) => {
+    return (
+        <div className="destaque-circle-item mb-4">
+            <div className="destaque-circle-item-img">
+            <img src={props.img} alt="" />
+
+            </div>
+            <p className="mt-2">{props.title}</p>
+        </div>
+    );
+};
+
+const DestaqueCircles = () => {
+    return (
+        <div className="d-flex gap-5 justify-content-center flex-wrap">
+            <DestaqueCircleItem title="Camisetas" img={0} />
+            <DestaqueCircleItem title="Calças" img={0} />
+            <DestaqueCircleItem title="Bonés" img={0} />
+            <DestaqueCircleItem title="Headphones" img={0} />
+            <DestaqueCircleItem title="Tênis" img={0} />
+        </div>
+    );
+};
+
 const DestaqueCard = (props) => {
     return (
         <div className="destaque-card mb-5 ps-4 pt-4 position-relative me-3">
@@ -36,7 +60,7 @@ export const Destaque = () => {
                 <div className="destaque-cards d-flex flex-wrap">
                     {obterProdutos().map((produto, id) => {
                         return (
-                            <div key={id} className="col-12 col-md-4 col-sm-12" >
+                            <div key={id} className="col-12 col-md-4 col-sm-12">
                                 <DestaqueCard
                                     desconto={produto.desconto}
                                     descricao={produto.descricao}
@@ -47,8 +71,9 @@ export const Destaque = () => {
                     })}
                 </div>
             </div>
-            <div className="destaque-bottom">
+            <div className="destaque-bottom text-center mt-5">
                 <h3 className="destaque-title">Coleções em destaque</h3>
+                <DestaqueCircles />
             </div>
         </div>
     );

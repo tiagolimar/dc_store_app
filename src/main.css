@@ -2,6 +2,10 @@
     font-family: "Inter";
 }
 
+#root{
+    background-color: #f9f8fe;
+}
+
 .Page{
     white-space: nowrap;
     overflow: hidden;

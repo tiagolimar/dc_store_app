@@ -1,3 +1,16 @@
+.destaque-title {
+    color: var(--dark-gray-2, #474747);
+    font-feature-settings: "clig" off, "liga" off;
+
+    /* Text Large Bold */
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38px; /* 158.333% */
+    letter-spacing: 0.75px;
+}
+
 .destaque-card {
     height: 225px;
     background-color: #d8e3f2;
@@ -40,9 +53,31 @@
     border-radius: 6px;
 }
 
-.destaque-link{
+.destaque-link {
     text-decoration: none;
     color: #c92071;
     line-height: 42px;
     font-weight: bold;
+}
+
+.destaque-circle-item-img {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px #00000010;
+}
+
+.destaque-circle-item p {
+    color: var(--dark-gray-2, #474747);
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+
+    /* Text X-Small Bold */
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px; /* 157.143% */
+    letter-spacing: 0.75px;
 }
