@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { ProdutoCard } from './ProdutoCard';
-import { ProdutoCardGroup } from './ProdutoCardGroup/index';
+import { ProdutoCard } from './components/ProdutoCard';
+import { ProdutoCardGroup } from './components/ProdutoCardGroup/';
 
 export const ProdutosEmAlta = () => {
     let [produtos, setProdutos] = useState([]);

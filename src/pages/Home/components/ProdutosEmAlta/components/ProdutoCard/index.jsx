@@ -2,7 +2,7 @@ import "./style.css"
 
 export const ProdutoCard = (props) => {
     const produto = props.data
-    const desconto = produto.desconto ? `${produto.desconto}% OFF` : ""
+    const desconto = produto.desconto ? `${produto.desconto}% OFF` : "bsnp"
     return (
         <div className="produto-alta-card mb-3 border border-black">
             <div className="produto-alta-bg">
