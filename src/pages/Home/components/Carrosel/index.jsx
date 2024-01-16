@@ -44,7 +44,7 @@ const CarosselItem = (props) => {
 
 export const Carrosel = () => {
     return (
-        <div id="carousel-slide" className="carousel slide" data-bs-ride="carousel">
+        <section id="carousel-slide" className="carousel slide" data-bs-ride="carousel">
             <div className="carousel-indicators">
                 <ButtonSlide active="true" num={0} label="Slide 1" />
                 <ButtonSlide num={1} label="Slide 2" />
@@ -57,6 +57,6 @@ export const Carrosel = () => {
                 <CarosselItem />
                 <CarosselItem />
             </div>
-        </div>
+        </section>
     );
 };

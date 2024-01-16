@@ -60,7 +60,7 @@ const DestaqueCard = (props) => {
 
 export const Destaque = () => {
     return (
-        <div className="container destaques mt-5">
+        <section className="container destaques mt-5">
             <div className="destaque-top d-flex flex-column">
                 <h3 className="destaque-title">Coleções em destaque</h3>
                 <div className="destaque-cards d-flex flex-wrap">
@@ -81,6 +81,6 @@ export const Destaque = () => {
                 <h3 className="destaque-title">Coleções em destaque</h3>
                 <DestaqueCircles />
             </div>
-        </div>
+        </section>
     );
 };
