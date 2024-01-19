@@ -162,7 +162,21 @@
 }
 
 .produto-alta-card-placement.unload{
-    background-color: #8f8f8f;
+    background-color: #928c8c;
     margin-bottom: 6px;
     border-radius: 6px;
+    background: linear-gradient(45deg, transparent, rgba(143, 141, 141, 0.8), transparent);
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background: linear-gradient(45deg, transparent, rgba(143, 141, 141, 0.8), transparent);
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        background: linear-gradient(45deg, transparent, rgba(119, 116, 116, 0.8), transparent);
+    }
 }
