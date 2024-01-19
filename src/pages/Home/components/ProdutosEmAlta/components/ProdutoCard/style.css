@@ -156,3 +156,13 @@
     line-height: 38px; /* 158.333% */
     letter-spacing: 0.75px;
 }
+
+.produto-alta-card-placement.unload *{
+    opacity: 0.1;
+}
+
+.produto-alta-card-placement.unload{
+    background-color: #8f8f8f;
+    margin-bottom: 6px;
+    border-radius: 6px;
+}
