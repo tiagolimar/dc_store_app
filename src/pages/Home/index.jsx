@@ -1,11 +1,7 @@
 import { Carrosel } from "./components/Carrosel";
 import { Destaque } from './components/Destaque/index';
+import { ProdutoEmDestaque } from "./components/ProdutoEmDestaque";
 import { ProdutosEmAlta } from './components/ProdutosEmAlta/index';
-
-
-const ProdutosEmDestaque = () => {
-    return <div className="Page">Produto em Destaque</div>;
-};
 
 function Home() {
     return (
@@ -13,7 +9,7 @@ function Home() {
             <Carrosel />
             <Destaque />
             <ProdutosEmAlta />
-            <ProdutosEmDestaque />
+            <ProdutoEmDestaque />
         </>
     );
 }
