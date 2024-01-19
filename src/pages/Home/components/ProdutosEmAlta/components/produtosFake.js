@@ -47,7 +47,7 @@ const produtosFake = [
         desconto: "100",
         precoAntes: "...",
         precoDepois: "...",
-        ativo: true,
+        ativo: false,
     },
     {
         id: 7,
@@ -87,7 +87,7 @@ const produtosFake = [
         desconto: "100",
         precoAntes: "...",
         precoDepois: "...",
-        ativo: true,
+        ativo: false,
     },
     {
         id: 11,
@@ -97,7 +97,7 @@ const produtosFake = [
         desconto: "100",
         precoAntes: "...",
         precoDepois: "...",
-        ativo: true,
+        ativo: false,
     },
     {
         id: 12,
@@ -117,7 +117,7 @@ const produtosFake = [
         desconto: 0,
         precoAntes: "...",
         precoDepois: "...",
-        ativo: true,
+        ativo: false,
     },
 ];
 
