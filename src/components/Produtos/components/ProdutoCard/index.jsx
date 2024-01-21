@@ -1,4 +1,4 @@
-import tenisAlta from "../../../../../../../assets/tenis-em-alta.png"
+import tenisAlta from "../../../../../assets/tenis-em-alta.png"
 import "./style.css"
 
 export const ProdutoCard = (props) => {

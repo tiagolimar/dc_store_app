@@ -1,14 +1,14 @@
 import { Carrosel } from "./components/Carrosel";
 import { Destaque } from './components/Destaque/index';
 import { ProdutoEmDestaque } from "./components/ProdutoEmDestaque";
-import { ProdutosEmAlta } from './components/ProdutosEmAlta/index';
+import { Produtos } from '../../components/Produtos';
 
 function Home() {
     return (
         <>
             <Carrosel />
             <Destaque />
-            <ProdutosEmAlta />
+            <Produtos />
             <ProdutoEmDestaque />
         </>
     );

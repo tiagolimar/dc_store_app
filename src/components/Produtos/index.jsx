@@ -1,28 +1,28 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { ProdutoCard } from './components/ProdutoCard';
-import { ProdutoCardGroup } from './components/ProdutoCardGroup/';
+import { ProdutoCardGroup } from './components/ProdutoCardGroup/index.jsx';
 import produtosFake from "./components/produtosFake.js";
 
-const filtrarProdutos = (produtos) => {
-    const QUANTIDADE = 12
+const filtrarProdutos = (produtos, quantidade=12) => {
     const produtosFiltrados = produtos.filter(p => p.ativo == true)
     
-    if (produtosFiltrados.length < QUANTIDADE) return produtos
+    if (produtosFiltrados.length < quantidade) return produtos
     
     return produtosFiltrados.slice(0, 12)
 }
 
-export const ProdutosEmAlta = () => {
+export const Produtos = (props) => {
     let [produtos, setProdutos] = useState(produtosFake);
     let [carregado, setCarregado] = useState(false)
+    const quantidade = props.quantidade? props.quantidade : 12
 
     const getProdutos = async () => {
         const response = await axios.get(
             "https://dc-store-api-ka0t.onrender.com/api/produtos"
         );
-        // setProdutos(response.data);
-        setProdutos(filtrarProdutos(response.data))
+
+        setProdutos(filtrarProdutos(response.data,quantidade))
 
         if (response.data) {
             setCarregado(true)
@@ -34,7 +34,7 @@ export const ProdutosEmAlta = () => {
     }, []);
 
     return (
-        <ProdutoCardGroup>{
+        <ProdutoCardGroup >{
             produtos.map((produto, id) => {
                 return <ProdutoCard data={produto} key={id} carregado={carregado} />
             })
