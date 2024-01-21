@@ -23,7 +23,7 @@ export const MenuFiltrar = () => {
     }, []);
 
     return (
-        <aside>
+        <aside className='mt-2'>
             <h3>Filtrar por</h3>
             <hr />
             <h4> Marca</h4>

@@ -2,10 +2,10 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App.jsx";
-import Error from './pages/Error.jsx';
+import Error from "./pages/Error.jsx";
 import Home from "./pages/Home";
-import {ProdutosPage} from './pages/ProdutosPage';
-import Categorias from './pages/Categorias.jsx';
+import {ProdutosPage} from "./pages/ProdutosPage";
+import Categorias from "./pages/Categorias.jsx";
 import MeusPedidos from "./pages/MeusPedidos.jsx";
 import "./main.css"
 

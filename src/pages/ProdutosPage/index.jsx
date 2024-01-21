@@ -5,7 +5,7 @@ import "./style.css"
 export const ProdutosPage = () => {
     return (
         <section className='page-produto mt-4'>
-            <header className='d-flex justify-content-between align-items-center ms-5 me-5'>
+            <header className='d-flex justify-content-between align-items-center me-5 mb-4'>
                 <div className="produtos-resultado d-flex gap-2">
                     <p className='produtos-resultado-titulo'>{`Resultados para "{Tênis}" - `}</p>
                     <p className='produtos-resultado-total'>{`{200} produtos`}</p>
@@ -17,7 +17,7 @@ export const ProdutosPage = () => {
                     </select>
                 </div>
             </header>
-            <main className='container d-flex'>
+            <main className='d-flex justify-content-center'>
                 <MenuFiltrar />
                 <div className="produtos-container">
                     <Produtos noTitle={true} quantidade={50} />

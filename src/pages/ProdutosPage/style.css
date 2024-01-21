@@ -1,3 +1,6 @@
-.page-produto aside{
-    width: 25vw;
+.page-produto{
+    margin-left: 5%;
+}
+main aside{
+    width: 500px;
 }
