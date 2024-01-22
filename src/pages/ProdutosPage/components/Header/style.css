@@ -1,0 +1,47 @@
+.produtos-resultado-titulo {
+    color: var(--dark-gray-2, #474747);
+    font-feature-settings: "clig" off, "liga" off;
+
+    /* Text Small Bold */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.75px;
+}
+
+.produtos-resultado-total {
+    color: var(--dark-gray-2, #474747);
+    font-feature-settings: "clig" off, "liga" off;
+
+    /* Text Small - Desktop */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 175% */
+    letter-spacing: 0.75px;
+}
+
+.produtos-ordernar-titulo {
+    color: var(--dark-gray-2, #474747);
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 175% */
+    letter-spacing: 0.75px;
+}
+
+.produtos-ordernar select{
+    color: var(--dark-gray-2, #474747);
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.75px;
+}

@@ -24,7 +24,7 @@ const Filtro = ({ tipo, opcoes }) => {
 
 export const MenuFiltrar = ({ dados }) => {
     return (
-        <aside className='mt-2'>
+        <aside className='menu-filtrar mt-2'>
             <h2>Filtrar por: </h2>
             {Object.entries(dados).map(([tipo, opcoes], index) => (
                 <Filtro key={index} tipo={tipo} opcoes={opcoes} />

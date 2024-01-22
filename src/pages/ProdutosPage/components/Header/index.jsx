@@ -1,3 +1,5 @@
+import './style.css'
+
 export const Header = (props) => {
     return (
         <header className="d-flex justify-content-between align-items-center me-5 mb-4">

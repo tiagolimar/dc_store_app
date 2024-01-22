@@ -1,27 +1,68 @@
-.checkbox-customizado {
+.menu-filtrar{
+    width: 1000px;
+}
+
+.menu-filtrar h2 {
+    color: var(--dark-gray-2, #474747);
+    font-feature-settings: "clig" off, "liga" off;
+
+    /* Text Small Bold */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.75px;
+}
+
+.menu-filtrar-filtro h4{
+    color: var(--dark-gray-2, #474747);
+    font-feature-settings: 'clig' off, 'liga' off;
+    
+    /* Text X-Small Bold */
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px; /* 157.143% */
+    letter-spacing: 0.75px;
+}
+
+.menu-filtrar-filtro label{
+    color: var(--dark-gray-2, #474747);
+    font-feature-settings: 'clig' off, 'liga' off;
+    
+    /* Text X-Small - Desktop */
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 157.143% */
+    letter-spacing: 0.25px;
+    cursor: pointer;
+}
+
+.menu-filtrar-filtro input{
     display: none;
 }
 
-/* Estiliza o label como um checkbox */
-.label-checkbox-customizado {
-    display: inline-block;
-    width: 20px;  /* Largura do checkbox customizado */
-    height: 20px; /* Altura do checkbox customizado */
-    background-color: #fff;
-    border: 2px solid #ddd;
-    cursor: pointer;
-    position: relative;
+.menu-filtrar-filtro label:hover{
+    color: #c92071;
+    font-weight: bold;
 }
 
-/* Quando o checkbox está marcado, adicione um "check" */
-.checkbox-customizado:checked + .label-checkbox-customizado::after {
-    content: '';
-    position: absolute;
-    left: 6px;
-    top: 2px;
-    width: 6px;
-    height: 12px;
-    border: solid black;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
+.menu-filtrar-filtro label::before{
+    display: inline-block;
+    content: "";
+    transform: translate(-10px,5px);
+    width: 22px;
+    height: 22px;
+    border: 1px solid #666666;
+    border-radius: 3px;
+    margin-left: 11px;
+}
+
+.menu-filtrar-filtro input:checked + .menu-filtrar-filtro label::before{
+    background-color: #c92071;
+    border: 1px solid #c92071;
 }
