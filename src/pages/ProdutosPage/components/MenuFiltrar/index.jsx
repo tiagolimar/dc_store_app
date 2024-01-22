@@ -14,7 +14,7 @@ const Filtro = ({ tipo, opcoes }) => {
             <h4>{capitalize(tipo)}</h4>
             {opcoes.map((opcao, index) => (
                 <div className="d-flex gap-2" key={index}>
-                    <input type="checkbox" id={opcao} />
+                    <input type="checkbox" id={opcao} onClick={(e) => console.log(e.target.id)}/>
                     <label htmlFor={opcao}>{opcao}</label>
                 </div>
             ))}

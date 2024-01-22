@@ -26,3 +26,9 @@
         font-size: calc(48px - 4vw);
     }
 }
+
+select {
+    background-color: #00000000;
+    border: none;
+    outline: none;
+}
