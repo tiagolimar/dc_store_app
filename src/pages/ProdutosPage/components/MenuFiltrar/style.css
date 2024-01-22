@@ -42,6 +42,10 @@
     cursor: pointer;
 }
 
+.menu-filtrar-filtro .d-flex{
+    position: relative;
+}
+
 .menu-filtrar-filtro input{
     display: none;
 }
@@ -51,18 +55,32 @@
     font-weight: bold;
 }
 
-.menu-filtrar-filtro label::before{
+.menu-filtrar-filtro label::before {
     display: inline-block;
     content: "";
-    transform: translate(-10px,5px);
+    transform: translate(-10px, 5px);
     width: 22px;
     height: 22px;
     border: 1px solid #666666;
     border-radius: 3px;
     margin-left: 11px;
+    position: relative; /* Adicionado para posicionar corretamente o ::after */
 }
 
-.menu-filtrar-filtro input:checked + .menu-filtrar-filtro label::before{
+.menu-filtrar-filtro input:checked + label::before {
     background-color: #c92071;
-    border: 1px solid #c92071;
+    border: none;
+}
+
+.menu-filtrar-filtro input:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    left: 12px; /* Centraliza horizontalmente */
+    width: 8px;
+    height: 14px;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    transform: translate(-50%, -50%) rotate(45deg) scaleX(-1); /* Ajusta a posição e rotação */
+    transform-origin: center; /* Garante que a rotação ocorra no centro */
 }
