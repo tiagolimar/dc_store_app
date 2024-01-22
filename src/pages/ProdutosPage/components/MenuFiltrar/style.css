@@ -1,0 +1,27 @@
+.checkbox-customizado {
+    display: none;
+}
+
+/* Estiliza o label como um checkbox */
+.label-checkbox-customizado {
+    display: inline-block;
+    width: 20px;  /* Largura do checkbox customizado */
+    height: 20px; /* Altura do checkbox customizado */
+    background-color: #fff;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Quando o checkbox está marcado, adicione um "check" */
+.checkbox-customizado:checked + .label-checkbox-customizado::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 6px;
+    height: 12px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}

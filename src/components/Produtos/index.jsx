@@ -6,10 +6,10 @@ import produtosFake from "./components/produtosFake.js";
 
 const filtrarProdutos = (produtos, quantidade=12) => {
     const produtosFiltrados = produtos.filter(p => p.ativo == true)
-    
+
     if (produtosFiltrados.length < quantidade) return produtos
     
-    return produtosFiltrados.slice(0, 12)
+    return produtosFiltrados.slice(0, quantidade)
 }
 
 export const Produtos = (props) => {
@@ -22,9 +22,8 @@ export const Produtos = (props) => {
             "https://dc-store-api-ka0t.onrender.com/api/produtos"
         );
 
-        setProdutos(filtrarProdutos(response.data,quantidade))
-
         if (response.data) {
+            setProdutos(filtrarProdutos(response.data,quantidade))
             setCarregado(true)
         }
     };

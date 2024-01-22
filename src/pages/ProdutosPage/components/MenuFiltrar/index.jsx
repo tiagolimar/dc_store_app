@@ -1,32 +1,34 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import produtosFake from './../../../../components/Produtos/components/produtosFake';
+import "./style.css"
 
-export const MenuFiltrar = () => {
-    let [produtos, setProdutos] = useState(produtosFake);
-    let [carregado, setCarregado] = useState(false)
+function capitalize(string) {
+    if (string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+    return string;
+}
 
-    const getProdutos = async () => {
-        const response = await axios.get(
-            "https://dc-store-api-ka0t.onrender.com/api/produtos"
-        );
+const Filtro = ({ tipo, opcoes }) => {
+    return (
+        <div className="menu-filtrar-filtro">
+            <hr />
+            <h4>{capitalize(tipo)}</h4>
+            {opcoes.map((opcao, index) => (
+                <div className="d-flex gap-2" key={index}>
+                    <input type="checkbox" id={opcao} />
+                    <label htmlFor={opcao}>{opcao}</label>
+                </div>
+            ))}
+        </div>
+    );
+};
 
-        setProdutos(response.data)
-
-        if (response.data) {
-            setCarregado(true)
-        }
-    };
-
-    useEffect(() => {
-        getProdutos();
-    }, []);
-
+export const MenuFiltrar = ({ dados }) => {
     return (
         <aside className='mt-2'>
-            <h3>Filtrar por</h3>
-            <hr />
-            <h4> Marca</h4>
+            <h2>Filtrar por: </h2>
+            {Object.entries(dados).map(([tipo, opcoes], index) => (
+                <Filtro key={index} tipo={tipo} opcoes={opcoes} />
+            ))}
         </aside>
     );
 };
