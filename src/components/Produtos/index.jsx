@@ -7,12 +7,18 @@ import produtosFake from "./components/produtosFake.js";
 
 import FiltroContexto from "../../pages/ProdutosPage/components/context/FiltroContexto.jsx";
 
-const filtrarProdutos = (produtos, quantidade=12) => {
-    const produtosFiltrados = produtos.filter(p => p.ativo == true)
+import contemFiltro from "./components/logicasFiltro";
+import { usarFiltro } from "./components/logicasFiltro";
 
-    if (produtosFiltrados.length < quantidade) return produtos
+const filtrarProdutos = (produtos, filtro, quantidade=12) => {
+    let produtosFiltrados = []
     
-    return produtosFiltrados.slice(0, quantidade)
+    if(contemFiltro(filtro)){
+        produtosFiltrados = usarFiltro(produtos,filtro)
+    }else{
+        produtosFiltrados = produtos.slice(0, quantidade)
+    }
+    return produtosFiltrados
 }
 
 export const Produtos = (props) => {
@@ -21,19 +27,19 @@ export const Produtos = (props) => {
     let [carregado, setCarregado] = useState(false)
     const quantidade = props.quantidade? props.quantidade : 12
 
-    const getProdutos = async () => {
+    const getProdutos = async (filtro) => {
         const response = await axios.get(
-            "https://dc-store-api-ka0t.onrender.com/api/produtos"
+            "https://dc-store-api-ka0t.onrender.com/api/produtos/status/true"
         );
 
         if (response.data) {
-            setProdutos(filtrarProdutos(response.data,quantidade))
+            setProdutos(filtrarProdutos(response.data, filtro, quantidade))
             setCarregado(true)
         }
     };
 
     useEffect(() => {
-        getProdutos();
+        getProdutos(filtro);
     }, [filtro]);
 
     return (

@@ -21,3 +21,4 @@ export const FiltroProvider = ({ children }) => {
 };
 
 export default FiltroContexto;
+

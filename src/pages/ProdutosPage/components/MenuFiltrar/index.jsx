@@ -32,7 +32,6 @@ const Filtro = ({ tipo, opcoes }) => {
 
         // Atualiza o estado do filtro
         setFiltro(novoFiltro);
-        console.log(novoFiltro);
     };
 
     return (
