@@ -6,7 +6,7 @@ import { Produtos } from "../../components/Produtos";
 import { MenuFiltrar } from "./components/MenuFiltrar";
 import { Header } from "./components/Header";
 
-import { ProdutosContexto } from "./components/ProdutoContexto.jsx";
+import {ProdutosContexto} from "./components/ProdutoContexto.jsx";
 
 import getDadosFiltro from "./components/getDadosFiltro.js";
 import "./style.css";
@@ -39,7 +39,7 @@ export const ProdutosPage = () => {
     return (
         <section className="page-produto mt-4">
             <ProdutosContexto.Provider value={produtos}>
-                <Header quantidade={200} />
+                <Header />
                 <main className="d-flex justify-content-center">
                     <MenuFiltrar dados={dadosFiltro} />
                     <div className="produtos-container">

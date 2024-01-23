@@ -1,8 +1,8 @@
 import { useContext } from 'react';
-import {ProdutosContexto} from '../ProdutoContexto'
+import {ProdutosContexto }from '../ProdutoContexto'
 import './style.css'
 
-export const Header = (props) => {
+export const Header = () => {
     const quantidade = useContext(ProdutosContexto).length
     return (
         <header className="d-flex justify-content-between align-items-center me-5 mb-4">
