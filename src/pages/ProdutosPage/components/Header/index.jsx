@@ -1,9 +1,9 @@
-import { useContext } from 'react';
-import {ProdutosContexto }from '../ProdutoContexto'
+// import { useContext } from 'react';
+// import {ProdutosContexto }from '../context/ProdutoContexto'
 import './style.css'
 
 export const Header = () => {
-    const quantidade = useContext(ProdutosContexto).length
+    const quantidade = 250;//useContext(ProdutosContexto).length
     return (
         <header className="d-flex justify-content-between align-items-center me-5 mb-4">
             <div className="produtos-resultado d-flex gap-2">

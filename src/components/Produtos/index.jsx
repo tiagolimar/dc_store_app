@@ -1,8 +1,11 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+
 import { ProdutoCard } from './components/ProdutoCard';
 import { ProdutoCardGroup } from './components/ProdutoCardGroup/index.jsx';
 import produtosFake from "./components/produtosFake.js";
+
+import FiltroContexto from "../../pages/ProdutosPage/components/context/FiltroContexto.jsx";
 
 const filtrarProdutos = (produtos, quantidade=12) => {
     const produtosFiltrados = produtos.filter(p => p.ativo == true)
@@ -13,6 +16,7 @@ const filtrarProdutos = (produtos, quantidade=12) => {
 }
 
 export const Produtos = (props) => {
+    const { filtro } = useContext(FiltroContexto);
     let [produtos, setProdutos] = useState(produtosFake);
     let [carregado, setCarregado] = useState(false)
     const quantidade = props.quantidade? props.quantidade : 12
@@ -30,7 +34,7 @@ export const Produtos = (props) => {
 
     useEffect(() => {
         getProdutos();
-    }, []);
+    }, [filtro]);
 
     return (
         <ProdutoCardGroup >{

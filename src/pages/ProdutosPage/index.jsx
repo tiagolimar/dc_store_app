@@ -1,19 +1,17 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-import produtosFake from "./../../components/Produtos/components/produtosFake";
 import { Produtos } from "../../components/Produtos";
 import { MenuFiltrar } from "./components/MenuFiltrar";
 import { Header } from "./components/Header";
 
-import {ProdutosContexto} from "./components/ProdutoContexto.jsx";
+
+import {FiltroProvider} from "./components/context/FiltroContexto.jsx";
 
 import getDadosFiltro from "./components/getDadosFiltro.js";
 import "./style.css";
 
 export const ProdutosPage = () => {
-    let [produtos, setProdutos] = useState(produtosFake);
-    let [carregado, setCarregado] = useState(false);
     let [dadosFiltro, setDadosFiltro] = useState({
         categorias: [],
         marcas: [],
@@ -26,9 +24,7 @@ export const ProdutosPage = () => {
         );
 
         if (response.data) {
-            setProdutos(response.data);
             setDadosFiltro(getDadosFiltro(response.data));
-            setCarregado(true);
         }
     };
 
@@ -38,15 +34,15 @@ export const ProdutosPage = () => {
 
     return (
         <section className="page-produto mt-4">
-            <ProdutosContexto.Provider value={produtos}>
                 <Header />
                 <main className="d-flex justify-content-center">
-                    <MenuFiltrar dados={dadosFiltro} />
-                    <div className="produtos-container">
-                        <Produtos noTitle={true} quantidade={20} />
-                    </div>
+                    <FiltroProvider>
+                        <MenuFiltrar dados={dadosFiltro} />
+                        <div className="produtos-container">
+                            <Produtos noTitle={true} quantidade={20} />
+                        </div>
+                    </FiltroProvider>
                 </main>
-            </ProdutosContexto.Provider>
         </section>
     );
 };
