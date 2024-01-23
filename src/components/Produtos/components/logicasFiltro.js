@@ -1,11 +1,13 @@
 const contemFiltro = (filtro) => {
     // Obter todas as chaves do objeto filtro
-    const chaves = Object.keys(filtro);
-
-    // Percorrer cada chave e verificar se o array correspondente não está vazio
-    for (let chave of chaves) {
-        if (filtro[chave] && filtro[chave].length > 0) {
-            return true; // Retorna true se encontrar um array não vazio
+    if (filtro){
+        const chaves = Object.keys(filtro);
+    
+        // Percorrer cada chave e verificar se o array correspondente não está vazio
+        for (let chave of chaves) {
+            if (filtro[chave] && filtro[chave].length > 0) {
+                return true; // Retorna true se encontrar um array não vazio
+            }
         }
     }
 
