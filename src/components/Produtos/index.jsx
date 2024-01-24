@@ -18,8 +18,13 @@ const tratarProdutos = (produtos, filtro, ordenar, quantidade=12)=>{
 }
 
 export const Produtos = (props) => {
-    const { filtro } = useContext(FiltroContexto)
-    const { ordenar, setOrdenar } = useContext(OrdenarContexto)
+    let { filtro } = useContext(FiltroContexto)
+    let { ordenar, setOrdenar } = useContext(OrdenarContexto)
+    
+    if (!ordenar) {
+        ordenar = {regra:"",quantidade:0}
+        setOrdenar = ()=>{}
+    }
 
     let [produtos, setProdutos] = useState(produtosFake)
     let [carregado, setCarregado] = useState(false)
