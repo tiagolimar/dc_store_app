@@ -7,7 +7,7 @@ import './style.css'
 
 
 export const Header = () => {
-    const { ordenar, setOrdenar } = useContext(OrdenarContexto)
+    const { setOrdenar } = useContext(OrdenarContexto)
     const quantidade = 250;//useContext(ProdutosContexto).length
 
     return (

@@ -39,6 +39,7 @@ export const Produtos = (props) => {
 
     useEffect(() => {
         getProdutos(filtro);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [filtro, ordenar]);
 
     return (

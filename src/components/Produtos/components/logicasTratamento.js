@@ -43,7 +43,7 @@ export const filtrarProdutos = (produtos, filtro, quantidade=12) => {
 
 export const ordenarProdutos = (produtos, ordenar) => {
     if (!produtos || produtos.length === 0) return [];
-
+    if (!ordenar) return produtos
     const [chave, direcao] = ordenar.split('-');
 
     produtos.sort((a, b) => {
