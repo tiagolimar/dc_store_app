@@ -50,7 +50,7 @@ export const Produtos = (props) => {
     }, [filtro, ordenar.regra]);
 
     return (
-        <ProdutoCardGroup >{
+        <ProdutoCardGroup noTitle={props.noTitle}>{
             produtos.map((produto, id) => {
                 return <ProdutoCard data={produto} key={id} carregado={carregado} />
             })

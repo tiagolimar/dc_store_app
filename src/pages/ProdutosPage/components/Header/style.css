@@ -9,6 +9,8 @@
     font-weight: 700;
     line-height: 24px; /* 150% */
     letter-spacing: 0.75px;
+
+    white-space: nowrap;
 }
 
 .produtos-resultado-total {
@@ -22,6 +24,10 @@
     font-weight: 400;
     line-height: 28px; /* 175% */
     letter-spacing: 0.75px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .produtos-ordernar-titulo {

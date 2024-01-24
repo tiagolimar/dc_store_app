@@ -36,7 +36,7 @@ export const ProdutosPage = () => {
         <section className="page-produto mt-4">
             <OrdenarProvider>
                 <Header />
-                <main className="d-flex justify-content-center">
+                <main className="d-flex">
                     <FiltroProvider>
                         <MenuFiltrar dados={dadosFiltro} />
                         <div className="produtos-container">

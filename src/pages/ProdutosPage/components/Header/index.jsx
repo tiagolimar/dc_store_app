@@ -11,7 +11,7 @@ export const Header = () => {
     const quantidade = ordenar.quantidade;//useContext(ProdutosContexto).length
     
     return (
-        <header className="d-flex justify-content-between align-items-center me-5 mb-4">
+        <header className="d-flex justify-content-between align-items-center me-5 mb-4 flex-wrap">
             <div className="produtos-resultado d-flex gap-2">
                 <p className="produtos-resultado-titulo">{`Resultados para "Tênis" - `}</p>
                 <p className="produtos-resultado-total">{`${quantidade} produtos`}</p>

@@ -8,7 +8,9 @@ function Home() {
         <>
             <Carrosel />
             <Destaque />
-            <Produtos />
+            <div className="container-lg">
+                <Produtos />
+            </div>
             <ProdutoEmDestaque />
         </>
     );

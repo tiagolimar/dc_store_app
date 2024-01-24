@@ -1,5 +1,5 @@
 .menu-filtrar{
-    width: 1000px;
+    min-width: 150px;
 }
 
 .menu-filtrar h2 {
@@ -83,4 +83,13 @@
     border-left: 2px solid white;
     transform: translate(-50%, -50%) rotate(45deg) scaleX(-1); /* Ajusta a posição e rotação */
     transform-origin: center; /* Garante que a rotação ocorra no centro */
+}
+
+@media (max-width:476px){
+    .page-produto main{
+        flex-wrap: wrap;
+    }
+    .menu-filtrar{
+        width: 100%;
+    }
 }
