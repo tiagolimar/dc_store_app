@@ -1,7 +1,7 @@
 # DC Store App
 Confira a aplicação em funcionamento: [DripStore Live Demo](https://dc-store-app.vercel.app/)
 
-![Live Demo](https://uploaddeimagens.com.br/imagens/navjuNM)
+![Live Demo](assets/DigitalStoreEcommerce.png)
 
 ## Visão Geral
 O DC Store App é uma aplicação web moderna projetada para e-commerce, essa aplicação foi projetada para fins educacionais. Construída com as mais recentes tecnologias web, oferece uma experiência de usuário fluida e responsiva.
