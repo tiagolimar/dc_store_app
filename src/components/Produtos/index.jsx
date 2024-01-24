@@ -2,29 +2,28 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 
 import { ProdutoCard } from './components/ProdutoCard';
-import { ProdutoCardGroup } from './components/ProdutoCardGroup/index.jsx';
+import { ProdutoCardGroup } from './components/ProdutoCardGroup';
 import produtosFake from "./components/produtosFake.js";
 
-import FiltroContexto from "../../pages/ProdutosPage/components/context/FiltroContexto.jsx";
+import FiltroContexto from "../../pages/ProdutosPage/components/context/FiltroContexto";
+import OrdenarContexto from "../../pages/ProdutosPage/components/context/OrdenarContexto";
 
-import contemFiltro from "./components/logicasFiltro";
-import { usarFiltro } from "./components/logicasFiltro";
+import { filtrarProdutos, ordenarProdutos } from "./components/logicasTratamento.js";
 
-const filtrarProdutos = (produtos, filtro, quantidade=12) => {
-    let produtosFiltrados = []
-    
-    if(contemFiltro(filtro)){
-        produtosFiltrados = usarFiltro(produtos,filtro)
-    }else{
-        produtosFiltrados = produtos.slice(0, quantidade)
-    }
-    return produtosFiltrados
+
+const tratarProdutos = (produtos, filtro, ordenar, quantidade=12)=>{
+    let produtosFiltrados = filtrarProdutos(produtos, filtro, quantidade)
+    let produtosOrdenados = ordenarProdutos(produtosFiltrados, ordenar)
+    return produtosOrdenados
 }
 
 export const Produtos = (props) => {
-    const { filtro } = useContext(FiltroContexto);
-    let [produtos, setProdutos] = useState(produtosFake);
+    const { filtro } = useContext(FiltroContexto)
+    const { ordenar } = useContext(OrdenarContexto)
+
+    let [produtos, setProdutos] = useState(produtosFake)
     let [carregado, setCarregado] = useState(false)
+
     const quantidade = props.quantidade? props.quantidade : 12
 
     const getProdutos = async (filtro) => {
@@ -33,14 +32,14 @@ export const Produtos = (props) => {
         );
 
         if (response.data) {
-            setProdutos(filtrarProdutos(response.data, filtro, quantidade))
+            setProdutos(tratarProdutos(response.data, filtro, ordenar, quantidade))
             setCarregado(true)
         }
     };
 
     useEffect(() => {
         getProdutos(filtro);
-    }, [filtro]);
+    }, [filtro, ordenar]);
 
     return (
         <ProdutoCardGroup >{

@@ -5,8 +5,8 @@ import { Produtos } from "../../components/Produtos";
 import { MenuFiltrar } from "./components/MenuFiltrar";
 import { Header } from "./components/Header";
 
-
-import {FiltroProvider} from "./components/context/FiltroContexto.jsx";
+import { FiltroProvider } from "./components/context/FiltroContexto";
+import { OrdenarProvider } from "./components/context/OrdenarContexto";
 
 import getDadosFiltro from "./components/getDadosFiltro.js";
 import "./style.css";
@@ -34,6 +34,7 @@ export const ProdutosPage = () => {
 
     return (
         <section className="page-produto mt-4">
+            <OrdenarProvider>
                 <Header />
                 <main className="d-flex justify-content-center">
                     <FiltroProvider>
@@ -43,6 +44,7 @@ export const ProdutosPage = () => {
                         </div>
                     </FiltroProvider>
                 </main>
+            </OrdenarProvider>
         </section>
     );
 };

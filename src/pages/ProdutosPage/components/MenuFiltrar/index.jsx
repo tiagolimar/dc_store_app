@@ -1,6 +1,6 @@
 import { useContext } from "react";
 
-import FiltroContexto from "../context/FiltroContexto.jsx";
+import FiltroContexto from "../context/FiltroContexto";
 import "./style.css"
 
 function capitalize(string) {

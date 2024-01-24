@@ -30,5 +30,40 @@ export const usarFiltro = (produtos, filtro) => {
     });
 };
 
+export const filtrarProdutos = (produtos, filtro, quantidade=12) => {
+    let produtosFiltrados = []
+    
+    if(contemFiltro(filtro)){
+        produtosFiltrados = usarFiltro(produtos,filtro)
+    }else{
+        produtosFiltrados = produtos.slice(0, quantidade)
+    }
+    return produtosFiltrados
+}
 
-export default contemFiltro
+export const ordenarProdutos = (produtos, ordenar) => {
+    if (!produtos || produtos.length === 0) return [];
+
+    const [chave, direcao] = ordenar.split('-');
+
+    produtos.sort((a, b) => {
+        let valorA = a[chave];
+        let valorB = b[chave];
+
+        // Verificar se os valores são numéricos
+        const saoNumericos = !isNaN(parseFloat(valorA)) && !isNaN(parseFloat(valorB));
+
+        if (saoNumericos) {
+            valorA = parseFloat(valorA);
+            valorB = parseFloat(valorB);
+        }
+
+        if (direcao === 'crescente') {
+            return valorA > valorB ? 1 : valorA < valorB ? -1 : 0;
+        } else if (direcao === 'decrescente') {
+            return valorA < valorB ? 1 : valorA > valorB ? -1 : 0;
+        }
+    });
+
+    return produtos;
+};
