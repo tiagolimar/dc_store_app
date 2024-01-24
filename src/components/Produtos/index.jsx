@@ -19,7 +19,7 @@ const tratarProdutos = (produtos, filtro, ordenar, quantidade=12)=>{
 
 export const Produtos = (props) => {
     const { filtro } = useContext(FiltroContexto)
-    const { ordenar } = useContext(OrdenarContexto)
+    const { ordenar, setOrdenar } = useContext(OrdenarContexto)
 
     let [produtos, setProdutos] = useState(produtosFake)
     let [carregado, setCarregado] = useState(false)
@@ -32,7 +32,9 @@ export const Produtos = (props) => {
         );
 
         if (response.data) {
-            setProdutos(tratarProdutos(response.data, filtro, ordenar, quantidade))
+            const produtosTratados = tratarProdutos(response.data, filtro, ordenar.regra, quantidade)
+            setOrdenar({regra:ordenar.regra, quantidade:produtosTratados.length})
+            setProdutos(produtosTratados)
             setCarregado(true)
         }
     };
@@ -40,7 +42,7 @@ export const Produtos = (props) => {
     useEffect(() => {
         getProdutos(filtro);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [filtro, ordenar]);
+    }, [filtro, ordenar.regra]);
 
     return (
         <ProdutoCardGroup >{

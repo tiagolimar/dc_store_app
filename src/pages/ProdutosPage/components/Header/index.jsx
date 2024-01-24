@@ -7,9 +7,9 @@ import './style.css'
 
 
 export const Header = () => {
-    const { setOrdenar } = useContext(OrdenarContexto)
-    const quantidade = 250;//useContext(ProdutosContexto).length
-
+    const { ordenar, setOrdenar } = useContext(OrdenarContexto)
+    const quantidade = ordenar.quantidade;//useContext(ProdutosContexto).length
+    
     return (
         <header className="d-flex justify-content-between align-items-center me-5 mb-4">
             <div className="produtos-resultado d-flex gap-2">
@@ -18,7 +18,7 @@ export const Header = () => {
             </div>
             <div className="produtos-ordernar border border-secondary rounded d-flex gap-1 p-2">
                 <label htmlFor='ordenamento' className="produtos-ordernar-titulo mb-auto">Ordernar por:</label>
-                <select name="ordenamento" id="ordenamento" onChange={e=>setOrdenar(e.target.value)}>
+                <select name="ordenamento" id="ordenamento" onChange={e=>setOrdenar({regra:e.target.value, quantidade:quantidade})}>
                     <option value="precoDepois-decrescente">Maior preço</option>
                     <option value="precoDepois-crescente">Menor preço</option>
                     <option value="nome-crescente" selected>Por nome</option>
