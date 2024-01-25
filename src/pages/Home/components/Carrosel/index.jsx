@@ -26,7 +26,7 @@ const CarosselItem = (props) => {
                     <h3 className="slide-left-title">
                         Melhores ofertas personalizadas
                     </h3>
-                    <h2 className="slide-left-subtitle">Queima de Estoque Nike 🔥</h2>
+                    <h2 className="slide-left-subtitle">Queima de Estoque Nike🔥</h2>
                     <p className="slide-left-text">
                         Consequat culpa exercitation mollit nisi excepteur do do
                         tempor laboris eiusmod irure consectetur.
