@@ -4,7 +4,7 @@ import "./style.css"
 export const ProdutoCard = (props) => {
     const produto = props.data
     const desconto = produto.desconto ? `${produto.desconto}% OFF` : ""
-    const carregado = props.carregado ? "" : "unload placeholder-wave ms-3"
+    const carregado = props.carregado ? "" : "unload placeholder-wave"
     const mostrarPreco = parseFloat(produto.precoDepois) < parseFloat(produto.precoAntes) ? "": "d-none"
 
     return (

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import tenisJordan from "../../../../../assets/tenis-jordan.png";
 import "./style.css";
 
@@ -20,7 +21,7 @@ export const ProdutoEmDestaque = () => {
                     repellat aspernatur mollitia autem ea dicta assumenda natus
                     debitis eveniet incidunt fugiat tenetur quod?
                 </p>
-                <button className="slide-left-btn">Ver Ofertas</button>
+                <Link className="slide-left-btn" to="/produtos">Ver Ofertas</Link>
             </div>
         </section>
     );

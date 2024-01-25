@@ -63,14 +63,6 @@
     margin-left: 10%;
 }
 
-/* @media (min-width: 1400px) {
-    .produto-alta-bg img {
-        width: 65%;
-        margin-left: 17.5%;
-        margin-top: -4%;
-    }
-} */
-
 .produto-alta-categoria {
     color: var(--light-gray, #8f8f8f);
     font-feature-settings: "clig" off, "liga" off;
@@ -130,6 +122,7 @@
 
 .produto-alta-card-placement.unload{
     background-color: #b7b9bd;
-    margin-bottom: 1.5em;
-    border-radius: 6px;
+    margin-bottom: 1em;
+    border-radius: 20px;
+    border: 8px solid #ffffff;
 }

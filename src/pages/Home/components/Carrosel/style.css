@@ -78,17 +78,6 @@
     .slide-right{
         width: 90vw;
     }
-
-    /* .slide-right img{
-        width: 220px;
-        margin-top: 400px;
-        position: relative;
-        left: -250px;
-    }
-
-    .slide-right img.circle{
-        width: 50px;
-    } */
 }
 
 @media (max-width: 420px){
@@ -96,15 +85,16 @@
         width: 290px;
         height: 290px;
     }
-    /* .slide-right img{
-        display: none;
-    } */
+
     .slide-left-btn{
         margin: 0px;
     }
 }
 
-.slide-left-btn {
+a.slide-left-btn {
+    display: block;
+    text-decoration: none;
+    text-align: center;
     background-color: #c92071;
     border-radius: 10px;
     width: 220px;

@@ -1,6 +1,7 @@
 import tenis from "../../../../../assets/tenis.png";
 import circulo from "../../../../../assets/circulo.svg";
 import "./style.css";
+import { Link } from "react-router-dom";
 
 const ButtonSlide = (props) => {
     const active = props.active ? "active" : "";
@@ -31,7 +32,7 @@ const CarosselItem = (props) => {
                         Consequat culpa exercitation mollit nisi excepteur do do
                         tempor laboris eiusmod irure consectetur.
                     </p>
-                    <button className="slide-left-btn">Ver Ofertas</button>
+                    <Link className="slide-left-btn" to="/produtos">Ver Ofertas</Link>
                 </div>
                 <div className="slide-right mt-5 ms-5 position-relative">
                     <img src={tenis} className="img-main" alt="Tênis" />

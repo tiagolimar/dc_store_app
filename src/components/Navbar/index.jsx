@@ -37,8 +37,8 @@ export function Navbar() {
                     <ButtonCollapse />
                     <Search />
                     <div className="btn-grupo d-flex gap-3 align-items-center">
-                        <a href="#" className="btn-cadastro">Cadastre-se</a>
-                        <button className="btn btn-entrar">Entrar</button>
+                        <Link className="btn-cadastro" to="/signin">Cadastre-se</Link>
+                        <Link className="btn btn-entrar" to="/login">Entrar</Link>
                         <img src={carrinho} alt="carrinho de compra" />
                     </div>
                 </div>
